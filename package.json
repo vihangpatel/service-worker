@@ -1,0 +1,17 @@
+{
+  "name": "service-workers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"kill": "lsof -i tcp:8089 | grep LISTEN | awk '{print $2}' | xargs kill -9",
+	"start": "npm run kill && python -m SimpleHTTPServer 8089",
+	"dev": "nodemon --exec npm run start"
+  },
+  "author": "Vihang Patel",
+  "license": "ISC",
+  "dependencies": {
+	"express": "^4.16.3"
+  }
+}
