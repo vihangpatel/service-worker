@@ -6,26 +6,29 @@ function bindEvents() {
 }
 
 function loadHome() {
-	loadScript("/src/js/home.js")
+	loadScript("/js/home.js")
 }
 
 function loadProduct() {
-	loadScript("/src/js/product.js")
+	loadScript("/js/product.js")
 }
 
 function loadContactus() {
-	loadScript("/src/js/contactus.js")
+	loadScript("/js/contactus.js")
 }
 
 function loadAboutus() {
-	loadScript("/src/js/aboutus.js")
+	loadScript("/js/aboutus.js")
 }
 
 function loadScript(jsFilePath) {
+	var id = jsFilePath.replace(/\//g, "-")
+
 	var js = document.createElement("script")
 
 	js.type = "text/javascript"
 	js.src = jsFilePath
+	js.id = id
 
 	document.body.appendChild(js)
 }
