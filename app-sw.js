@@ -2,7 +2,6 @@
 	self.addEventListener("install", event => {
 		console.log("V1 installing…")
 
-		// cache a cat SVG
 		event.waitUntil(
 			caches.open("static-v1").then(cache => {
 				cache.add("/js/aboutus.js")
@@ -10,6 +9,7 @@
 				cache.add("/js/home.js")
 				cache.add("/js/main.js")
 				cache.add("/js/product.js")
+				cache.add("/css/main.css")
 			})
 		)
 	})
