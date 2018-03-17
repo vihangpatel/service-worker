@@ -1,0 +1,7 @@
+body .offline {
+	background: gray;
+}
+
+body .offline > header {
+	background: darkgray;
+}
